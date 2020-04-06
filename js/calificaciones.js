@@ -65,7 +65,7 @@ function calificaciones()
   switch (opcion) {
 //**********************************************************************************************//
     case 1:
-
+    document.write("<h1> Consulta de Calificaciones </h1>");
     var elementos = [0,"Examen Parcial ", "Practica Final: ", "Examen Final"];
     for (var i = 0; i < clase.length; i++) {
       document.write("<br>");
@@ -93,6 +93,7 @@ function calificaciones()
 
         }
       }
+      document.write("<h1> Sumatoria de Calificaciones </h1>")
       for (var i = 0; i < clase.length; i++) {
         if (clase[i][0] == materia){
           document.write("<h3>" + clase[i][0] + "</h3>");
@@ -109,6 +110,7 @@ function calificaciones()
 //**********************************************************************************************//
 
     case 3:
+    document.write("<h1> Promedio de Calificaciones </h1>")
         criterio_prom = parseInt(prompt("De que criterio quieres el promedio de las notas?\n1- Examenes Parciales\n2- Practicas Finales\n 3- Examenes Finales"));
 
         switch (criterio_prom) {
@@ -171,12 +173,225 @@ function calificaciones()
 //**********************************************************************************************//
     case 4:
 
-        
+      if (cantidad_materias == 1) {
+
+        alert("Solo Tienes una materia insertada, por lo tanto no puedes ejecutar esta opcion");
+
+      }
+      else{
+
+        criterio_mayor = parseInt(prompt("De que criterio quieres ver la nota mas alta?\n1- Examenes Parciales\n2- Practicas Finales\n 3- Examenes Finales"));
+
+        switch (criterio_mayor) {
+          case 1:
+          array_mayor = new Array();
+          for (var i = 0; i < clase.length; i++) {
+            for (var x = 1; x < 2; x++) {
+            val = parseInt(clase[i][1]);
+            array_mayor.push(val);
+
+            }
+          }
+
+            array_mayor.sort();
+            valor_mayor = array_mayor[array_mayor.length - 1];
+
+          document.write("<h1> Valor Mayor de Calificaciones en Examenes Parciales </h1>");
+
+
+          var elementos = [0,"Examen Parcial ", "Practica Final: ", "Examen Final"];
+          for (var i = 0; i < clase.length; i++) {
+            document.write("<br>");
+            document.write("<h3>" + clase[i][0] + "</h3>");
+            document.write("<ul>")
+            for (var x = 1; x < 2; x++) {
+               document.write("<li>" + "<b>" + "Examen parcial:"+ "</b>" + ": " + clase[i][1]) + "</li>";
+          }
+          document.write("</ul>")
+          }
+
+            document.write("La Mayor puntuacion en examenes parciales fue con una puntuacion de " + valor_mayor);
+
+            break;
+          case 2:
+              array_mayor = new Array();
+              for (var i = 0; i < clase.length; i++) {
+                for (var x = 1; x < 2; x++) {
+                val = parseInt(clase[i][2]);
+                array_mayor.push(val);
+
+                }
+              }
+
+                array_mayor.sort();
+                valor_mayor = array_mayor[array_mayor.length - 1];
+
+              document.write("<h1> Valor Mayor de Calificaciones en Practicas Finales </h1>");
+
+
+              var elementos = [0,"Examen Parcial ", "Practica Final: ", "Examen Final"];
+              for (var i = 0; i < clase.length; i++) {
+                document.write("<br>");
+                document.write("<h3>" + clase[i][0] + "</h3>");
+                document.write("<ul>")
+                for (var x = 1; x < 2; x++) {
+                   document.write("<li>" + "<b>" + "Practica Final"+ "</b>" + ": " + clase[i][2]) + "</li>";
+              }
+              document.write("</ul>")
+              }
+
+                document.write("La Mayor puntuacion en Practicas Finales fue con una puntuacion de " + valor_mayor);
+           break;
+          case 3:
+
+          array_mayor = new Array();
+          for (var i = 0; i < clase.length; i++) {
+            for (var x = 1; x < 2; x++) {
+            val = parseInt(clase[i][3]);
+            array_mayor.push(val);
+
+            }
+          }
+
+            array_mayor.sort();
+            valor_mayor = array_mayor[array_mayor.length - 1];
+
+          document.write("<h1> Valor Mayor de Calificaciones en Examenes Finales </h1>");
+
+
+          var elementos = [0,"Examen Parcial ", "Practica Final: ", "Examen Final"];
+          for (var i = 0; i < clase.length; i++) {
+            document.write("<br>");
+            document.write("<h3>" + clase[i][0] + "</h3>");
+            document.write("<ul>")
+            for (var x = 1; x < 2; x++) {
+               document.write("<li>" + "<b>" + "Examen Final" + "</b>" + ": " + clase[i][3]) + "</li>";
+          }
+          document.write("</ul>")
+          }
+
+            document.write("La Mayor puntuacion en examenes finales fue con una puntuacion de " + valor_mayor);
+
+
+          break;
+          default:
+          alert("");
+      }
+
+
+    }
+
 
       break;
 //**********************************************************************************************//
-    case 5:
-      alert("Opcion 5");
+case 5:
+    if (cantidad_materias == 1) {
+
+      alert("Solo Tienes una materia insertada, por lo tanto no puedes ejecutar esta opcion");
+
+    }
+    else{
+
+      criterio_menor = parseInt(prompt("De que criterio quieres ver la nota mas alta?\n1- Examenes Parciales\n2- Practicas Finales\n 3- Examenes Finales"));
+
+      switch (criterio_menor) {
+        case 1:
+        array_menor = new Array();
+        for (var i = 0; i < clase.length; i++) {
+          for (var x = 1; x < 2; x++) {
+          val = parseInt(clase[i][1]);
+          array_menor.push(val);
+
+          }
+        }
+
+          array_menor.sort();
+          valor_menor = array_menor[0];
+
+        document.write("<h1> Valor Menor de Calificaciones en Examenes Parciales </h1>");
+
+
+        var elementos = [0,"Examen Parcial ", "Practica Final: ", "Examen Final"];
+        for (var i = 0; i < clase.length; i++) {
+          document.write("<br>");
+          document.write("<h3>" + clase[i][0] + "</h3>");
+          document.write("<ul>")
+          for (var x = 1; x < 2; x++) {
+             document.write("<li>" + "<b>" + "Examen parcial:"+ "</b>" + ": " + clase[i][1]) + "</li>";
+        }
+        document.write("</ul>")
+        }
+
+          document.write("La Menor puntuacion en examenes parciales fue con una puntuacion de " + valor_menor);
+
+          break;
+        case 2:
+            array_menor = new Array();
+            for (var i = 0; i < clase.length; i++) {
+              for (var x = 1; x < 2; x++) {
+              val = parseInt(clase[i][2]);
+              array_menor.push(val);
+
+              }
+            }
+
+              array_menor.sort();
+              valor_menor = array_menor[array_menor.length - 1];
+
+            document.write("<h1> Valor Menor de Calificaciones en Practicas Finales </h1>");
+
+
+            var elementos = [0,"Examen Parcial ", "Practica Final: ", "Examen Final"];
+            for (var i = 0; i < clase.length; i++) {
+              document.write("<br>");
+              document.write("<h3>" + clase[i][0] + "</h3>");
+              document.write("<ul>")
+              for (var x = 1; x < 2; x++) {
+                 document.write("<li>" + "<b>" + "Practica Final"+ "</b>" + ": " + clase[i][2]) + "</li>";
+            }
+            document.write("</ul>")
+            }
+
+              document.write("La Menor puntuacion en Practicas Finales fue con una puntuacion de " + valor_mayor);
+         break;
+        case 3:
+
+        array_menor = new Array();
+        for (var i = 0; i < clase.length; i++) {
+          for (var x = 1; x < 2; x++) {
+          val = parseInt(clase[i][3]);
+          array_menor.push(val);
+
+          }
+        }
+
+          array_menor.sort();
+          valor_menor = array_menor[array_menor.length - 1];
+
+        document.write("<h1> Valor Menor de Calificaciones en Examenes Finales </h1>");
+
+
+        var elementos = [0,"Examen Parcial ", "Practica Final: ", "Examen Final"];
+        for (var i = 0; i < clase.length; i++) {
+          document.write("<br>");
+          document.write("<h3>" + clase[i][0] + "</h3>");
+          document.write("<ul>")
+          for (var x = 1; x < 2; x++) {
+             document.write("<li>" + "<b>" + "Examen Final" + "</b>" + ": " + clase[i][3]) + "</li>";
+        }
+        document.write("</ul>")
+        }
+
+          document.write("La Menor puntuacion en examenes finales fue con una puntuacion de " + valor_menor);
+
+
+        break;
+        default:
+        alert("");
+    }
+
+
+  }
       break;
 //**********************************************************************************************//
     default:
