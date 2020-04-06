@@ -1,6 +1,44 @@
 function calificaciones()
 {
-  var clase = [];
+
+  var opcion_clase = document.getElementById('opcion_clase');
+
+  var opcion = opcion_clase[opcion_clase.selectedIndex].text;
+
+  switch (opcion) {
+//**********************************************************************************************//
+    case "Registrar Calificaciones":
+
+      break;
+//**********************************************************************************************//
+
+    case "Sumatoria de Notas":
+        alert("Opcion 2");
+      break;
+//**********************************************************************************************//
+
+    case "Promedio":
+        alert("Opcion 3");
+      break;
+//**********************************************************************************************//
+    case "Valor Mayor":
+      alert("Opcion 4");
+      break;
+//**********************************************************************************************//
+    case "Valor Menor":
+      alert("Opcion 5");
+      break;
+//**********************************************************************************************//
+    default:
+      alert("");
+      break;
+  }
+
+
+  
+
+
+  /*var clase = [];
 
   //do {
       var cantidad_materias = prompt("Escribe la cantidad de materias que vas a digitar");
@@ -85,7 +123,10 @@ function suma()
        document.write("<li>" + "<b>" + elementos[x] + "</b>" + ": " + clase[i][x]) + "</li>";
   }
   document.write("</ul>")
-  }
+}*/
+
+
+event.preventDefault();
 
 
 }
