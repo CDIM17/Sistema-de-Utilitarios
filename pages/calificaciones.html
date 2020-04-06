@@ -20,7 +20,7 @@
     </a>
     <a class="py-2 d-none d-md-inline-block" href="empleo.html">Solicitud de Empleo</a>
     <a class="py-2 d-none d-md-inline-block" href="#">Registro y Consulta de Calificaciones</a>
-      <a class="py-2 d-none d-md-inline-block" href="#">Conversor de Unidades</a>
+      <a class="py-2 d-none d-md-inline-block" href="utilitarios.html">Conversor de Unidades</a>
     <a class="py-2 d-none d-md-inline-block" href="calculadora.html">Calculadora</a>
   </div>
 </nav>
@@ -39,28 +39,18 @@
 
       <!-- Select Basic -->
       <div class="form-group">
-        <label class="col-md-4 control-label" for="selectbasic">Elegir Opción</label>
         <div class="col-md-6">
           <select id="opcion_clase" name="selectbasic" class="form-control">
-            <option value=""disabled selected>Seleccione una Opción</option>
             <option value="1">Registrar Calificaciones</option>
-            <option value="2">Sumatoria de Notas</option>
-            <option value="3">Promedio</option>
-            <option value="3">Valor Mayor</option>
-            <option value="3">Valor Menor</option>
-
           </select>
         </div>
       </div>
-
-
 
       <!-- Button (Double) -->
       <div class="form-group">
         <label class="col-md-4 control-label" for="button1id"></label>
         <div class="col-md-8">
-          <button id="button1id" name="button1id" class="btn btn-success" onclick="return calificaciones()">Convertir</button>
-          <button id="button2id" name="button2id" class="btn btn-danger">Limpiar Campos</button>
+          <button id="button1id" name="button1id" class="btn btn-success" onclick="return calificaciones()">Enviar</button>
         </div>
       </div>
 
@@ -74,6 +64,21 @@
     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 form_moneda">
 
       <!-- Tabla con operacion -->
+
+    </div>
+
+  </section>
+
+  <section class="row">
+
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+
+      <!--<h3 id="nom_materias"></h3>-->
+
+      <ul id="criterios">
+
+
+      </ul>
 
     </div>
 
