@@ -5,7 +5,7 @@
     <title>Empleo</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link href="../css/style.css" rel="stylesheet">
-    <script type="text/javascript" src="../js/utilitarios.js"></script>
+    <script type="text/javascript" src="../js/calificaciones.js"></script>
 
   </head>
 
@@ -35,57 +35,31 @@
       <fieldset>
 
       <!-- Form Name -->
-      <legend>Convertidor de Temperatura</legend>
-
-      <!-- Text input-->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="textinput">Valor:</label>
-        <div class="col-md-8">
-        <input id="valor_escala" name="" type="number" placeholder=" °F °C °K" class="form-control input-md">
-        </div>
-      </div>
+      <legend>Registro y Consulta de Calificaciones</legend>
 
       <!-- Select Basic -->
       <div class="form-group">
-        <label class="col-md-4 control-label" for="selectbasic">Seleccionar Escala</label>
+        <label class="col-md-4 control-label" for="selectbasic">Elegir Opción</label>
         <div class="col-md-6">
-          <select id="escala_valor" name="selectbasic" class="form-control">
-            <option value=""disabled selected>Seleccione una Escala</option>
-            <option value="1">Celsius</option>
-            <option value="2">Fahrenheit</option>
-            <option value="3">Kelvin</option>
+          <select id="opcion_clase" name="selectbasic" class="form-control">
+            <option value=""disabled selected>Seleccione una Opción</option>
+            <option value="1">Registrar Calificaciones</option>
+            <option value="2">Sumatoria de Notas</option>
+            <option value="3">Promedio</option>
+            <option value="3">Valor Mayor</option>
+            <option value="3">Valor Menor</option>
 
           </select>
         </div>
       </div>
 
-      <!-- Select Basic -->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="selectbasic">Convertir a:</label>
-        <div class="col-md-4">
-          <select id="escala_conv" name="selectbasic" class="form-control">
-              <option value="" disabled selected>Convertir a:</option>
-              <option value="3">Celsius</option>
-              <option value="4">Fahrenheit</option>
-              <option value="5">Kelvin</option>
-          </select>
-        </div>
-      </div>
 
-      <!-- Text input-->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="textinput">Conversión</label>
-        <div class="col-md-4">
-        <input id="result_escala" name="textinput" type="text" placeholder="0" class="form-control input-md" value="0">
-
-        </div>
-      </div>
 
       <!-- Button (Double) -->
       <div class="form-group">
         <label class="col-md-4 control-label" for="button1id"></label>
         <div class="col-md-8">
-          <button id="button1id" name="button1id" class="btn btn-success" onclick="return conversor_temperatura()">Convertir</button>
+          <button id="button1id" name="button1id" class="btn btn-success" onclick="return calificaciones()">Convertir</button>
           <button id="button2id" name="button2id" class="btn btn-danger">Limpiar Campos</button>
         </div>
       </div>
