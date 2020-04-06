@@ -1,24 +1,64 @@
+
+
 function sumar(num1, num2)
 {
-  var suma = num1 * num2;
-  return suma;
+  if (isNaN(num1) || isNaN(num2)){
 
+    alert("Debes completar todos los campos para calcular");
+
+  }
+  else {
+    var suma = num1 * num2;
+    resultado.innerHTML = 0;
+    return suma;
+
+  }
+  return 0;
 }
+
 
 function resta(num1,num2)
 {
-  var resta = num1 - num2;
-  return resta;
+  if (isNaN(num1) || isNaN(num2)){
+
+    alert("Debes completar todos los campos para calcular");
+
+  }
+  else{
+    var resta = num1 - num2;
+    return resta;
+  }
+  return 0;
+
 }
 function multiplicar(num1,num2)
 {
+if (isNaN(num1) || isNaN(num2)){
+
+  alert("Debes completar todos los campos para calcular");
+
+}
+else{
   var multiplicar = num1 * num2;
   return multiplicar;
+
 }
+return 0;
+
+}
+
 function dividir(num1,num2)
 {
-  var dividir = num1/num2;
-  return dividir;
+  if (isNaN(num1) || isNaN(num2)){
+
+    alert("Debes completar todos los campos para calcular");
+
+  }
+  else{
+    var dividir = num1/num2;
+    return dividir;
+  }
+  return 0;
 }
 
 function calculadora()
@@ -45,7 +85,7 @@ function calculadora()
      resultado.innerHTML = dividir(num1,num2);
     break;
     default:
-      alert('nada');
+      alert('Debes Completar los Campos');
 
   }
 

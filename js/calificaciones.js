@@ -1,11 +1,10 @@
 function calificaciones()
 {
-
   var clase = [];
 
-  //do {
-      var cantidad_materias = prompt("Escribe la cantidad de materias que vas a digitar");
-  //} while (cantidad_materias > 0 || cantidad_materias == '' || cantidad_materias == null || cantidad_materias == /^[a-z]$/);
+  do {
+      var cantidad_materias = parseInt(prompt("Escribe la cantidad de materias que vas a digitar"));
+  } while (cantidad_materias <= 0 || cantidad_materias == "" || cantidad_materias == null || cantidad_materias == undefined || isNaN(cantidad_materias) );
 
   for (var i = 0; i < cantidad_materias; i++){
         materia = new Array();
@@ -36,7 +35,7 @@ function calificaciones()
             clase[i][2] = practica_final;
               break;
             default:
-            alert("Error las notas de la practica final no pueden exceder de 30pts o ser negativos");
+            alert("Error las notas de la practica final no pueden exceder de 40pts o ser negativos");
             finish();
           }
 
@@ -51,7 +50,7 @@ function calificaciones()
              clase[i][3] = examen_final;
               break;
             default:
-            alert("Error las notas del examen final no pueden exceder de 30pts o ser nagativas");
+            alert("Error las notas del examen final no pueden exceder de 40pts o ser nagativas");
             finish();
         }
       }
@@ -65,6 +64,7 @@ function calificaciones()
   switch (opcion) {
 //**********************************************************************************************//
     case 1:
+    document.write("<a href='calificaciones.html' style='color:red; text-decoration:underline'>Volver a la Pagina</a>");
     document.write("<h1> Consulta de Calificaciones </h1>");
     var elementos = [0,"Examen Parcial ", "Practica Final: ", "Examen Final"];
     for (var i = 0; i < clase.length; i++) {
@@ -93,6 +93,8 @@ function calificaciones()
 
         }
       }
+      document.write("<a href='calificaciones.html' style='color:red; text-decoration:underline'>Volver a la Pagina</a>");
+
       document.write("<h1> Sumatoria de Calificaciones </h1>")
       for (var i = 0; i < clase.length; i++) {
         if (clase[i][0] == materia){
@@ -110,6 +112,8 @@ function calificaciones()
 //**********************************************************************************************//
 
     case 3:
+    document.write("<a href='calificaciones.html' style='color:red; text-decoration:underline'>Volver a la Pagina</a>");
+
     document.write("<h1> Promedio de Calificaciones </h1>")
         criterio_prom = parseInt(prompt("De que criterio quieres el promedio de las notas?\n1- Examenes Parciales\n2- Practicas Finales\n 3- Examenes Finales"));
 
@@ -196,6 +200,8 @@ function calificaciones()
             array_mayor.sort();
             valor_mayor = array_mayor[array_mayor.length - 1];
 
+          document.write("<a href='calificaciones.html' style='color:red; text-decoration:underline'>Volver a la Pagina</a>");
+
           document.write("<h1> Valor Mayor de Calificaciones en Examenes Parciales </h1>");
 
 
@@ -226,6 +232,8 @@ function calificaciones()
                 array_mayor.sort();
                 valor_mayor = array_mayor[array_mayor.length - 1];
 
+                document.write("<a href='calificaciones.html' style='color:red; text-decoration:underline'>Volver a la Pagina</a>");
+
               document.write("<h1> Valor Mayor de Calificaciones en Practicas Finales </h1>");
 
 
@@ -255,6 +263,8 @@ function calificaciones()
 
             array_mayor.sort();
             valor_mayor = array_mayor[array_mayor.length - 1];
+
+            document.write("<a href='calificaciones.html' style='color:red; text-decoration:underline'>Volver a la Pagina</a>");
 
           document.write("<h1> Valor Mayor de Calificaciones en Examenes Finales </h1>");
 
@@ -308,6 +318,8 @@ case 5:
           array_menor.sort();
           valor_menor = array_menor[0];
 
+        document.write("<a href='calificaciones.html' style='color:red; text-decoration:underline'>Volver a la Pagina</a>");
+
         document.write("<h1> Valor Menor de Calificaciones en Examenes Parciales </h1>");
 
 
@@ -336,7 +348,9 @@ case 5:
             }
 
               array_menor.sort();
-              valor_menor = array_menor[array_menor.length - 1];
+              valor_menor = array_menor[0];
+
+            document.write("<a href='calificaciones.html' style='color:red; text-decoration:underline'>Volver a la Pagina</a>");
 
             document.write("<h1> Valor Menor de Calificaciones en Practicas Finales </h1>");
 
@@ -366,7 +380,9 @@ case 5:
         }
 
           array_menor.sort();
-          valor_menor = array_menor[array_menor.length - 1];
+          valor_menor = array_menor[0];
+
+        document.write("<a href='calificaciones.html' style='color:red; text-decoration:underline'>Volver a la Pagina</a>");
 
         document.write("<h1> Valor Menor de Calificaciones en Examenes Finales </h1>");
 
