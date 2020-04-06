@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Empleo</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link href="../css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body style="width:100%">
+
+<script type="text/javascript" src="../js/empleo.js"></script>
+
+
+<nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2" href="../index.html" aria-label="Product">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+    </a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Solicitud de Empleo</a>
+    <a class="py-2 d-none d-md-inline-block" href="calificaciones.html">Registro y Consulta de Calificaciones</a>
+    <a class="py-2 d-none d-md-inline-block" href="utilitarios.html">Conversor de Unidades</a>
+    <a class="py-2 d-none d-md-inline-block" href="calculadora.html">Calculadora</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <section class = "row" style="width:100%">
+
+    <div class="col-lg-4">
+
+          <form id="myForm"><br>
+          <fieldset >
+
+          <!-- Form Name -->
+          <legend>Formulario de Solicitud</legend>
+
+          <!-- Text input-->
+          <div class="form-group ">
+            <label class="col-md-4 control-label" for="textinput">Cedula</label>
+            <div class="col-md-12 text-center">
+            <input required id="cedula" name="textinput" type="text" placeholder="Escribe tu cedula/identificacion" class="form-control input-md">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Nombre</label>
+            <div class="col-md-12">
+            <input required id="nombre" name="textinput" type="text" placeholder="Escribe tu nombre" class="form-control input-md">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Edad</label>
+            <div class="col-md-12">
+            <input required id="edad" name="textinput" type="number" placeholder="Edad" class="form-control input-md">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Telefono</label>
+            <div class="col-md-12">
+            <input id="telefono" name="textinput" type="text" placeholder="Direc" class="form-control input-md">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput">Email</label>
+            <div class="col-md-12">
+            <input required id="email" name="textinput" type="email" placeholder="Direccion de Correo Electronico @" class="form-control input-md">
+            </div>
+          </div>
+
+          <!-- Textarea -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="textarea">Direccion</label>
+            <div class="col-md-12">
+              <textarea class="form-control" id="direccion" name="textarea" placeholder="Pais-Ciudad-Calle"></textarea>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class="form-group">
+            <div class="col-md-12">
+              <button id="enviar" name="singlebutton" class="alert alert-success" onclick="return tabla()">Enviar</button>
+              <button id="enviar" name="singlebutton" class="alert alert-danger" onclick="return myForm()">Borrar Datos</button>
+            </div>
+          </div>
+
+          </fieldset>
+          </form>
+
+    </div>
+
+      <div class="col-lg-8" style="border: 2px solid;">
+
+        <h3>Tabla De Informacion </h3>
+
+              <table id="myTable">
+
+                <tr>
+                  <th>Cedula</th>
+                  <th>Nombre</th>
+                  <th>Edad</th>
+                  <th>Direccion</th>
+                  <th>Telefono</th>
+                  <th>Email</th>
+                  <th>Categoria</th>
+                </tr>
+                <tr>
+
+                  <td><span id="tcedula"></span></td>
+                  <td><span id="tnombre"></span></td>
+                  <td><span id="tedad"></span></td>
+                  <td><span id="tdireccion"></span></td>
+                  <td><span id="tphone"></span></td>
+                  <td><span id="temail"></span></td>
+                  <td><span id="tcategoria"></span></td>
+
+                </tr>
+
+              </table>
+      </div>
+  </section>
+
+</div>
+
+  </body>
+</html>

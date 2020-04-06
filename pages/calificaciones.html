@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Empleo</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link href="../css/style.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/utilitarios.js"></script>
+
+  </head>
+
+  <body>
+
+<script type="text/javascript" src="../js/utilitarios.js"></script>
+
+<nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2" href="../index.html" aria-label="Product">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+    </a>
+    <a class="py-2 d-none d-md-inline-block" href="empleo.html">Solicitud de Empleo</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Registro y Consulta de Calificaciones</a>
+      <a class="py-2 d-none d-md-inline-block" href="#">Conversor de Unidades</a>
+    <a class="py-2 d-none d-md-inline-block" href="calculadora.html">Calculadora</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <section class = "row">
+
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 form_temperatura">
+
+      <form class="form-horizontal">
+      <fieldset>
+
+      <!-- Form Name -->
+      <legend>Convertidor de Temperatura</legend>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Valor:</label>
+        <div class="col-md-8">
+        <input id="valor_escala" name="" type="number" placeholder=" °F °C °K" class="form-control input-md">
+        </div>
+      </div>
+
+      <!-- Select Basic -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="selectbasic">Seleccionar Escala</label>
+        <div class="col-md-6">
+          <select id="escala_valor" name="selectbasic" class="form-control">
+            <option value=""disabled selected>Seleccione una Escala</option>
+            <option value="1">Celsius</option>
+            <option value="2">Fahrenheit</option>
+            <option value="3">Kelvin</option>
+
+          </select>
+        </div>
+      </div>
+
+      <!-- Select Basic -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="selectbasic">Convertir a:</label>
+        <div class="col-md-4">
+          <select id="escala_conv" name="selectbasic" class="form-control">
+              <option value="" disabled selected>Convertir a:</option>
+              <option value="3">Celsius</option>
+              <option value="4">Fahrenheit</option>
+              <option value="5">Kelvin</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="textinput">Conversión</label>
+        <div class="col-md-4">
+        <input id="result_escala" name="textinput" type="text" placeholder="0" class="form-control input-md" value="0">
+
+        </div>
+      </div>
+
+      <!-- Button (Double) -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="button1id"></label>
+        <div class="col-md-8">
+          <button id="button1id" name="button1id" class="btn btn-success" onclick="return conversor_temperatura()">Convertir</button>
+          <button id="button2id" name="button2id" class="btn btn-danger">Limpiar Campos</button>
+        </div>
+      </div>
+
+      </fieldset>
+
+<!----------------------------------------------------------------------------------------------->
+    </form>
+
+    </div>
+
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 form_moneda">
+
+      <!-- Tabla con operacion -->
+
+    </div>
+
+  </section>
+
+</div>
+
+  </body>
+</html>

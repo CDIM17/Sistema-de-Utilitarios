@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Empleo</title>
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+    <link href="../css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+<script type="text/javascript" src="../js/calculadora.js"></script>
+
+<nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+    <a class="py-2" href="../index.html" aria-label="Product">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24" focusable="false"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
+    </a>
+    <a class="py-2 d-none d-md-inline-block" href="empleo.html">Solicitud de Empleo</a>
+    <a class="py-2 d-none d-md-inline-block" href="calificaciones.html">Registro y Consulta de Calificaciones</a>
+      <a class="py-2 d-none d-md-inline-block" href="utilitarios.html">Conversor de Unidades</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Calculadora</a>
+  </div>
+</nav>
+
+<div class="container">
+
+  <section class = "row">
+    <div class="col-lg-3"></div>
+
+    <div class="col-lg-5" style="border: 2px solid;">
+
+          <form><br>
+          <fieldset >
+
+          <!-- Form Name -->
+          <legend class="text-center">Calculadora</legend>
+
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput"></label>
+            <div class="col-md-12">
+            <input required id="num1" name="textinput" type="number" placeholder="Escribe un numero" class="form-control input-md">
+            </div>
+          </div>
+
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="textinput"></label>
+            <div class="col-md-12">
+            <input required id="num2" name="textinput" type="number" placeholder="Escribe otro numero" class="form-control input-md">
+            </div>
+          </div>
+
+          <!-- Select Basic -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="selectbasic">Operación</label>
+              <div class="col-md-4">
+                <select id="operacion" name="selectbasic" class="form-control">
+                  <option value=""disabled selected>Seleccione una Operacion...</option>
+                  <option value="1">Suma</option>
+                  <option value="2">Resta</option>
+                  <option value="3">Multiplicar</option>
+                  <option value="4">Dividir</option>
+                </select>
+              </div>
+            </div>
+
+          <!-- Button -->
+          <div class="form-group">
+            <div class="col-md-12">
+              <button id="enviar" name="singlebutton" class="btn btn-primary" onclick="return calculadora()">Enviar</button>
+            </div>
+          </div>
+
+          </fieldset>
+          </form>
+          <p id="text_resultado">Resultado: <span id="resultado"></span></p>
+
+    </div>
+
+
+  </section>
+
+</div>
+
+  </body>
+</html>
